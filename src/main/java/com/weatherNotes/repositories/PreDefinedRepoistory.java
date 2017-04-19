@@ -23,6 +23,6 @@ public interface PreDefinedRepoistory extends HibernateRepository<PreDefinedNote
      * @param temp this is the value of temperature 
      * @return PreDefinedNote
      */
-    @Query("SELECT p FROM PreDefinedNote p WHERE p.minTemp<:temp and p.maxTemp>=:temp")
+    @Query("SELECT p FROM PreDefinedNote p WHERE  (:temp BETWEEN minTemp and maxTemp and minTemp !=:temp) or :temp >minTemp and maxTemp is null")
     PreDefinedNote findBetweenRange(@Param("temp") Double temp);
 }

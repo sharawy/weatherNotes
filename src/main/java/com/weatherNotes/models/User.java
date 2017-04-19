@@ -26,7 +26,6 @@ public class User implements java.io.Serializable {
     @OneToOne(fetch = FetchType.EAGER)
     private UserRole userRole;
     @NotEmpty
-    @Column(unique = true)
     private String userName;
     @Email
     @NotEmpty

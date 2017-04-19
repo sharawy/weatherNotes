@@ -29,7 +29,7 @@ SET time_zone = "+00:00";
 CREATE TABLE `predefinednote` (
   `id` int(11) NOT NULL,
   `value` varchar(255) NOT NULL,
-  `maxTemp` double NOT NULL,
+  `maxTemp` double  NULL,
   `minTemp` double NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -41,7 +41,7 @@ INSERT INTO `predefinednote` (`id`, `value`, `maxTemp`, `minTemp`) VALUES
 (1, 'pre note 1', 10, 0),
 (2, 'pre note 2', 15, 10),
 (3, 'pre note 3', 20, 15),
-(4, 'pre note 4', 99999999999, 20);
+(4, 'pre note 4', NULL, 20);
 
 -- --------------------------------------------------------
 
@@ -70,7 +70,7 @@ INSERT INTO `systemnote` (`id`, `value`, `date`) VALUES
 
 CREATE TABLE `userroles` (
   `userRoleId` int(11) NOT NULL,
-  `userRoleName` varchar(255) DEFAULT NULL
+  `userRoleName` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -133,7 +133,6 @@ ALTER TABLE `userroles`
 ALTER TABLE `users`
   ADD PRIMARY KEY (`userId`),
   ADD UNIQUE KEY `email` (`email`),
-  ADD UNIQUE KEY `userName` (`userName`),
   ADD KEY `FK4E39DE87D3E366B` (`userRole_userRoleId`);
 
 --

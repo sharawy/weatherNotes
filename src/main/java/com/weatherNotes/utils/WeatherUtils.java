@@ -32,7 +32,7 @@ public class WeatherUtils {
         weatherWrapper.setHumidity((Integer) main.get("humidity"));
         weatherWrapper.setIcon(todayInfo.get("icon").toString());
         weatherWrapper.setMaxTemp((Double) main.get("temp_max"));
-        weatherWrapper.setMinTemp((Double) main.get("temp_min"));
+        weatherWrapper.setMinTemp(Double.parseDouble( main.get("temp_min").toString()));
         weatherWrapper.setTemp((Double) main.get("temp"));
         weatherWrapper.setPressure((Double) main.get("pressure"));
         weatherWrapper.setWindSpeed((Double) wind.get("speed"));

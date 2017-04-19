@@ -21,7 +21,7 @@ public class PreDefinedNote extends Note {
     @NotNull
     private Double minTemp;
     
-    @NotNull
+   
     @Max(Long.MAX_VALUE)
     private Double maxTemp;
 
