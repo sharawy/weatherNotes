@@ -24,13 +24,6 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     @Autowired
     private ConfigurableEnvironment env;
 
-    @Autowired
-    CustomAuthenticationSuccessHandler customAuthenticationSuccessHandler;
-    
-//    @Autowired
-//    public void configureGlobal(AuthenticationManagerBuilder auth) throws Exception {
-//
-//    }
 
     @Bean
     public RequestContextListener requestContextListener() {
