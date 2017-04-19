@@ -7,8 +7,9 @@
     <div class="hero" data-bg-image="images/banner.png">
         <div class="container">
             <h2>Note:</h2>
-            <p><strong>${todayWeather.note.value}</strong></p>
-
+            <p>${todayWeather.note.value}</p>
+            <h2>Description:</h2>
+            <p>${todayWeather.description}</p>
         </div>
     </div>
     <div class="forecast-table">
@@ -27,16 +28,16 @@
                                 <img src="http://openweathermap.org/img/w/${todayWeather.icon}.png" alt="" width=90>
                             </div>	
                         </div>
-                                <span><img src="<c:url value="/resources/images/icon-umberella.png"/>" alt="">20%</span>
-                                <span><img src="<c:url value="/resources/images/icon-wind.png"/>" alt="">18km/h</span>
-                        
+                        <span><img src="<c:url value="/resources/images/icon-umberella.png"/>" alt="">${todayWeather.humidity}%</span>
+                        <span><img src="<c:url value="/resources/images/icon-wind.png"/>" alt="">${todayWeather.windSpeed}km/h</span>
+
                     </div>
                 </div>
 
             </div>
         </div>
     </div>
-    
+
     <jsp:include page="common/footer.jsp"/>
 
 </html>

@@ -25,3 +25,4 @@ nbproject/**
 .project
 .settings
 composer.lock
+/target/
