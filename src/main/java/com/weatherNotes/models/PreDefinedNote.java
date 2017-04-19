@@ -17,20 +17,17 @@ import javax.validation.constraints.NotNull;
 @Entity
 public class PreDefinedNote extends Note {
 
-   
     @NotNull
     private Double minTemp;
-    
-   
+
     @Max(Long.MAX_VALUE)
     private Double maxTemp;
 
     @AssertTrue(message = "invalid range")
     public boolean isTempRangeValid() {
-        if(maxTemp != null)
-        return (minTemp <maxTemp);
-        else
-            return false;
+        if  (maxTemp == null && minTemp != null) 
+                return true;
+        else return minTemp < maxTemp;
     }
 
     public Double getMinTemp() {
