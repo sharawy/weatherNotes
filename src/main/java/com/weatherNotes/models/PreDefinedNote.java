@@ -27,7 +27,10 @@ public class PreDefinedNote extends Note {
 
     @AssertTrue(message = "invalid range")
     public boolean isTempRangeValid() {
-        return minTemp <maxTemp;
+        if(maxTemp != null)
+        return (minTemp <maxTemp);
+        else
+            return false;
     }
 
     public Double getMinTemp() {

@@ -35,7 +35,7 @@
                                                           data-bv-notempty="true" value="${preNote.minTemp}"
                                                           data-bv-notempty-message="Min Temp is required and cannot be empty" />
                             </div>
-                                                          <div class="col-md-12"><input placeholder="Max Temp..." type='text' name='maxTemp'  required ="true"
+                                                          <div class="col-md-12"><input placeholder="Max Temp..." type='text' name='maxTemp' 
                                                           data-bv-notempty="true" value="${preNote.maxTemp}"
                                                           data-bv-notempty-message="Max Temp is required and cannot be empty" />
                             </div>
