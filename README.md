@@ -16,7 +16,9 @@ this is a maven project created by netbeans ide
 <br>
 3- open project in netbean ide
 <br>
-4- clean and build or you could run command mvn clean install
+4- change logs path in src\main\resources\log4j.properties
 <br>
-5- run it on tomcat server
+5- clean and build or you could run command mvn clean install
+<br>
+6- deploy to tomcat or glassfish
 </p>
